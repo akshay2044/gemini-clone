@@ -1,0 +1,340 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+.main .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #050101;
+}
+
+.main .nav .center-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+.greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+}
+.greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: #dfe4ea;
+}
+.card p {
+    color: #585858;
+    font-size: 17px;
+}
+.card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+.search-box div {
+    display: flex;
+    gap: 15px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+.bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+.result {
+    padding: 0% 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+.result::-webkit-scrollbar{
+    display:none;
+}
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result img {
+    width: 40px;
+    border-radius: 50%;
+}
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.animated-bg {
+    border-radius: 4px;
+    border: none;
+    animation: loader 3s infinite linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+}
+@keyframes loader {
+    0% {
+        background-position: -800px 0
+    }
+    100% {
+        background-position: 800px 0
+    }
+}
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+@media (max-width:600px) {
+    .main-bottom input{
+        flex: none;
+        width: 140px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+}
+
+.srs-output {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.srs-section {
+  margin-bottom: 20px;
+}
+
+.srs-section strong {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.srs-section p, .srs-section ul {
+  margin-top: 10px;
+  color: #555;
+}
+
+.srs-section ul {
+  list-style-type: disc;
+  padding-left: 20px;.srs-output {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  
+  .srs-section {
+    margin-bottom: 20px;
+  }
+  
+  .srs-section strong {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .srs-section p, .srs-section ul {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .srs-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  /* General SRS Output container */
+.srs-output {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Section title styling */
+.srs-output .section-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Paragraph styling */
+.srs-output p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Subsection title styling */
+.srs-output .sub-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* List styling */
+.srs-output ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.srs-output ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* For strong elements inside paragraphs */
+.srs-output p strong {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Loader animation */
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.animated-bg {
+    border-radius: 4px;
+    border: none;
+    animation: loader 3s infinite linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    width: 100%;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 800px 0;
+    }
+}
+
+  
+}
+/* Style for SRS INSIDER BOT text */
+.srs-insider-bot {
+  font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+  font-size: 1.5rem; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Set a dark text color */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add space between letters */
+  margin-left: 20px; /* Add space from the left */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+/* Add hover effect */
+.srs-insider-bot:hover {
+  color: #FF4D4D; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+/* Add interactive icon next to text */
+.srs-insider-bot::after {
+  content: '🤖'; /* Add a robot icon after the text */
+  margin-left: 8px; /* Add space between the text and icon */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animate the icon on hover */
+.srs-insider-bot:hover::after {
+  transform: rotate(20deg); /* Rotate the icon slightly on hover */
+}
+
