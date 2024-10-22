@@ -271,7 +271,12 @@ const Main = () => {
           {output && <p className="output" dangerouslySetInnerHTML={{ __html: output }}></p>}  {/* Output displayed if input is valid */}
           <p className="bottom-info">
             SRS Insider Bot may display inaccurate info. Please verify responses. Your privacy is protected.
+            <p>Developed by : @ADMH Tech</p>
           </p>
+          
+             
+         
+
         </div>
       </div>
     </div>
